@@ -56,13 +56,13 @@ if rounded_percentage >= 3 or rounded_percentage <= -3:
     client = Client(account_sid, auth_token)
     for i in range(3):
         message = client.messages.create(
-            from_="YOUR NUMBER GENERATED FROM TWILIO",  # from_ because from is a keyword
+            from_="YOUR NUMBER GENERATED FROM TWILIO",  # from_ because from is a keyword  # ENTER YOUR NUMBER GENERATED FROM TWILIO
             body=f"""
             TSLA: {change_symbol}{rounded_percentage}
             Headline: {news_data[i]["title"]}
             Brief: {news_data[i]["description"]}
             """,
-            to='YOUR NUMBER WITH COUNRTY CODE'
+            to='YOUR NUMBER WITH COUNRTY CODE'         # ENTER YOUR PHONE NUMBER WITH THE COUNTRY CODE
         )
 
 
